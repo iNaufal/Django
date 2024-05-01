@@ -6,10 +6,15 @@
     <title>Blog Django - Venomare</title>
   </head>
   <body>
-    <h1>Menu Blog</h1>
+    <h1>Welcome to {{ title }}</h1>
+    <h3>Developer: {{ developer }}</h3>
     <ul>
       <li><a href="/">Home</a></li>
       <li><a href="blog/">Blog</a></li>
+      <ul>
+        <li><a href="/blog/news">News</a></li>
+        <li><a href="/blog/article">Article</a></li>
+      </ul>
       <li><a href="contact/">Contact</a></li>
     </ul>
   </body>
