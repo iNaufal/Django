@@ -1,21 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blog Django - Venomare</title>
-  </head>
-  <body>
-    <h1>Welcome to {{ title }}</h1>
-    <h3>Developer: {{ developer }}</h3>
-    <ul>
-      <li><a href="/">Home</a></li>
-      <li><a href="blog/">Blog</a></li>
-      <ul>
-        <li><a href="/blog/news">News</a></li>
-        <li><a href="/blog/article">Article</a></li>
-      </ul>
-      <li><a href="contact/">Contact</a></li>
-    </ul>
-  </body>
-</html>
+<!-- Ambil Base.html dari templates utama-->
+{% extends "base.html" %}
+<!---->
+{% block content %}
+<!-- get navbar from blog-->
+{% include "blog/snippets/navbar.html" %}
+<h1>Welcome to {{ title }}</h1>
+<h3>Developer: {{ developer }}</h3>
+{% endblock content %}

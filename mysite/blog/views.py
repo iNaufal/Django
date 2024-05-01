@@ -6,6 +6,12 @@ def index(request):
   context = {
     'title': 'blog bersama',
     'developer': 'Venomare',
+    'nav':[
+      ['/','Home'],
+      ['/blog','Blog'],
+      ['/blog/news','News'],
+      ['/blog/article','Article'],
+    ]
   }
   return render(request, 'blog/index.html', context)
 

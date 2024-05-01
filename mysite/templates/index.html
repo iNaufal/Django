@@ -1,17 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{{ title }}}</title>
-  </head>
-  <body>
-    <h1>Welcome to {{ title }}</h1>
-    <h3>Developer: {{ developer }}</h3>
-    <ul>
-      <li><a href="/">Home</a></li>
-      <li><a href="blog/">Blog</a></li>
-      <li><a href="contact/">Contact</a></li>
-    </ul>
-  </body>
-</html>
+{% block content %}
+<!-- Navbar -->
+{% include "snippets/navbar.html" %}
+<h1>Welcome to {{ title }}</h1>
+<h3>Developer: {{ developer }}</h3>
+{% endblock content %}
