@@ -4,13 +4,13 @@ from django.http import HttpResponse
 # Create your views here.
 def index(request):
   context = {
-    'title': 'blog bersama',
+    'title': 'Menu Blog',
+    'subtitle': 'Welcome to my website',
     'developer': 'Venomare',
     'nav':[
       ['/','Home'],
       ['/blog','Blog'],
-      ['/blog/news','News'],
-      ['/blog/article','Article'],
+      ['/contact','Contact'],
     ]
   }
   return render(request, 'blog/index.html', context)

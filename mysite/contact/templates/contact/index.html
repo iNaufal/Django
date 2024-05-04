@@ -1,16 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Index Django - Venomare</title>
-  </head>
-  <body>
-    <h1>Menu Contact</h1>
-    <ul>
-      <li><a href="/">Home</a></li>
-      <li><a href="blog">Blog</a></li>
-      <li><a href="contact">Contact</a></li>
-    </ul>
-  </body>
-</html>
+<!-- Ambil Base.html dari templates utama-->
+{% extends "base.html" %}
+<!--static-->
+{% load static %}
+<!-- head tittle -->
+{% block head_tittle %} {{ tittle }} {% endblock head_tittle %}
+<!-- content -->
+{% block content %}
+<img
+  src="{% static '/contact/images/vreedom.jpeg' %}"
+  alt="banner"
+  width="100%"
+/>
+<!-- get navbar from blog-->
+{% include "blog/snippets/navbar.html" %}
+<h1>{{ title }}</h1>
+<h3>{{ subtitle }}</h3>
+<h3>Developer: {{ developer }}</h3>
+{% endblock content %}
