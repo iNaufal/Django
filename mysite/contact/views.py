@@ -7,5 +7,6 @@ def index(request):
     'subtitle': 'Welcome to my website',
     'developer': 'Venomare',
     'banner':'contact/images/venomare.png',
+    'css_apps': 'contact/css/styles_contact.css',
   }
   return render(request, 'contact/index.html', context)

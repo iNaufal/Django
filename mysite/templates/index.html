@@ -1,11 +1,9 @@
 {% extends 'base.html' %}
 <!-- get static folder -->
 {% load static %}
-<!-- head tittle -->
-{% block head_tittle %} {{ tittle }} {% endblock head_tittle %}
 <!-- content -->
 {% block content %}
-<img src="{% static banner %}" alt="banner" />
+<img id="banner" src="{% static banner %}" alt="banner" />
 
 <h1>{{ title }}</h1>
 <h3>{{ subtitle }}</h3>
