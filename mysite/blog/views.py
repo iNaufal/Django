@@ -7,11 +7,7 @@ def index(request):
     'title': 'Menu Blog',
     'subtitle': 'Welcome to my website',
     'developer': 'Venomare',
-    'nav':[
-      ['/','Home'],
-      ['/blog','Blog'],
-      ['/contact','Contact'],
-    ]
+    'banner': 'blog/images/vreedom.jpeg'
   }
   return render(request, 'blog/index.html', context)
 

@@ -6,11 +6,6 @@ def index(request):
     'title': 'About Contact',
     'subtitle': 'Welcome to my website',
     'developer': 'Venomare',
-    'nav':[
-      ['/','Home'],
-      ['/blog','Blog'],
-      ['/contact','Contact'],
-    ],
-    'banner':'images/venomare.png',
+    'banner':'contact/images/venomare.png',
   }
   return render(request, 'contact/index.html', context)

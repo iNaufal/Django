@@ -6,9 +6,8 @@
 {% block head_tittle %} {{ tittle }} {% endblock head_tittle %}
 <!-- content -->
 {% block content %}
-<img src="{% static '/blog/images/vreedom.jpeg' %}" alt="banner" width="100%" />
-<!-- get navbar from blog-->
-{% include "blog/snippets/navbar.html" %}
+<img src="{% static banner %}" alt="banner" width="20%" />
+
 <h1>{{ title }}</h1>
 <h3>{{ subtitle }}</h3>
 <h3>Developer: {{ developer }}</h3>
