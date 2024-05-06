@@ -6,7 +6,9 @@ def index(request):
     'title': 'Web development full stack',
     'subtitle': 'Welcome to my website',
     'developer': 'Venomare',
-    'banner': 'images/venomare.png',
+    'banner': 'images/vreedom.jpeg',
+    'name': 'venomare',
+    'jobs': 'Software Engineer',
     # 'css': 'css/css_global.css',
   }
   return render(request, 'index.html', context)
