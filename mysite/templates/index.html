@@ -1,30 +1,23 @@
 {% extends 'base.html' %}
 <!-- get static folder -->
 {% load static %}
+{% block head_tittle %} {{ tittle }} {% endblock head_tittle %}
 <!-- content -->
 {% block content %}
 <div class="max-2-md mx-auto border py-8 px-8 rounded-lg shadow-xl">
   <div class="flex items-center space-x-6">
-    <img
-      class="w-14 h-14 rounded-full"
-      src="{% static 'images/vreedom.jpeg' %}"
-      alt="banner"
-    />
+    <img class="w-12 h-12" src="{% static 'images/venomare.png' %}" alt="banner">
     <div class="space-y-0.5">
       <p class="text-2xl font-semibold text-black">{{ name }}</p>
       <p class="text-slate-600 font-medium">{{ jobs }}</p>
     </div>
-    <button
-      class="border px-5 py-1 rounded-full text-slate-600 border-red-600 font-semibold hover:bg-red-500 hover:text-white hover:border-transparent hover:ring-2 hover:ring-red-300 hover:ring-offset-2"
-    >
+    <button class="border px-5 py-1 rounded-full text-slate-600 border-red-600 font-semibold hover:bg-red-500 hover:text-white hover:border-transparent hover:ring-2 hover:ring-red-300 hover:ring-offset-2">
       Cek Profile
     </button>
   </div>
   <h1>{{ title }}</h1>
   <h3>Developer: {{ developer }}</h3>
-  <subtitle class="text-xl mx-auto text-slate-500 mt-5"
-    >{{ subtitle }}</subtitle
-  >
+  <subtitle class="text-xl mx-auto text-slate-500 mt-5">{{ subtitle }}</subtitle>
 </div>
 
 {% endblock content %}

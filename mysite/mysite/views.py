@@ -7,7 +7,7 @@ def index(request):
     'subtitle': 'Welcome to my website',
     'developer': 'Venomare',
     'banner': 'images/vreedom.jpeg',
-    'name': 'venomare',
+    'name': 'Venomare',
     'jobs': 'Software Engineer',
     # 'css': 'css/css_global.css',
   }
