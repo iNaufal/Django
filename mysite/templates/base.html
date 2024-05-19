@@ -7,11 +7,12 @@
     <title>{% block head_tittle %} {{ tittle }} {% endblock head_tittle %}</title>
     <link rel="stylesheet" href="{% static 'src/output.css' %}" />
   </head>
-  <body class="min-h-screen flex items-center">
+  <body>
     {% include 'snippets/navbar.html' %}
     <!--block-->
     {% block content %}
-    <!--endblock-->
     {% endblock content %}
+    <!--end block-->
+    {% include 'snippets/footer.html' %}
   </body>
 </html>
