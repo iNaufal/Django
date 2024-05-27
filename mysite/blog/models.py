@@ -1,7 +1,7 @@
 from django.db import models
 
 # Create your models here.
-class Publication(models.Model):
+class Publications(models.Model):
   name = models.CharField(max_length=50)
   
   def __str__(self):
@@ -21,20 +21,23 @@ class Tag(models.Model):
     return self.name
 
 class Article(models.Model):
-  title = models.CharField(max_length=256) #atribute dari package model
-  fill = models.TextField(null=True)
+  title = models.CharField(max_length=100) #atribute dari package model
+  fill = models.TextField()
   OPTION_CATEGORY = [
-    ('python', 'python'),
-    ('django', 'django'),
-    ('javascript', 'javascript'),
+    ('python','python'),
+    ('django','django'),
+    ('javascript','javascript'),
   ]
   categories = models.CharField(max_length=50, choices=OPTION_CATEGORY)
-  publications = models.OneToOneField(Publication, on_delete=models.CASCADE)
+  publications = models.ForeignKey(Publications, on_delete=models.CASCADE, null=True, blank=True)
   tags = models.ManyToManyField(Tag)
-  
+
   def __str__(self):
     return self.title
-  
+
 class ReadList(models.Model):
   readers = models.ForeignKey(Reader, on_delete=models.CASCADE)
   articles = models.ForeignKey(Article, on_delete=models.CASCADE)
+  
+  def __str__(self):
+    return f"{self.articles.title} - {self.readers.name}"
